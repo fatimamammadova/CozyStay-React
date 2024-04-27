@@ -1,0 +1,85 @@
+@import "../../styles/main";
+
+.navbar-container {
+  font-family: "Jost", sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .navbar-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 33.33333%;
+
+    &.logo {
+      justify-content: center;
+      img {
+        width: 190px;
+      }
+    }
+    &:last-child {
+      justify-content: flex-end;
+    }
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      width: 35px;
+      margin-right: 30px;
+      cursor: pointer;
+
+      .menu-line {
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+        background-color: white;
+
+        &:nth-child(2) {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 500;
+        li {
+          a {
+            padding: 0 15px;
+            line-height: 60px;
+            display: block;
+            position: relative;
+            .active:before {
+              content: "";
+              display: block;
+              position: absolute;
+              bottom: 15px;
+              background-color: #ffffff;
+              height: 1px;
+              width: calc(100% - 50px);
+              transition: transform 0.2s ease-in-out;
+              transform-origin: left;
+            }
+
+            .icon-container {
+              display: inline-block;
+              width: 14px;
+              margin-left: 5px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .language {
+      margin-right: 50px;
+      font-size: 15px;
+    }
+  }
+}
