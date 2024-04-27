@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactHeader from "./ContactHeader/ContactHeader";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./_header.scss";
+import { menu } from "../../utils/data";
 
 const Header = () => {
   return (
@@ -18,33 +19,32 @@ const Header = () => {
           </button>
 
           <nav>
-            <ul>
-              <li>
-                <NavLink to="/">
-                  <span className="active">Home</span>
-                  <span className="icon-container">
-                    <FontAwesomeIcon icon={faChevronDown} size="xs" />
-                  </span>
-                </NavLink>
-              </li>
+            <ul className="menu">
+              {menu &&
+                menu.map((link, index) => (
+                  <li key={index} className="menu-list">
+                    <NavLink
+                      to={link.path}
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      <span className="active">{link.name}</span>
+                      <span className="icon-container">
+                        <FontAwesomeIcon icon={faChevronDown} size="xs" />
+                      </span>
+                    </NavLink>
 
-              <li>
-                <NavLink to="/rooms">
-                  <span className="active">Rooms</span>
-                  <span className="icon-container">
-                    <FontAwesomeIcon icon={faChevronDown} size="xs" />
-                  </span>
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink to="/pages">
-                  <span className="active">Pages</span>
-                  <span className="icon-container">
-                    <FontAwesomeIcon icon={faChevronDown} size="xs" />
-                  </span>
-                </NavLink>
-              </li>
+                    {link.sub_menu && (
+                      <ul className="submenu">
+                        {link.sub_menu &&
+                          link.sub_menu.map((submenu, index) => (
+                            <li className="submenu-list" key={index}>
+                              <Link to={submenu.path}>{submenu.name}</Link>
+                            </li>
+                          ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
             </ul>
           </nav>
         </div>
