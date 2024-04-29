@@ -1,0 +1,50 @@
+.side-menu-hover {
+  transition: all 0.4s linear;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  height: 44px;
+  border: 1px solid var(--primary);
+  color: #ffffff;
+  font-family: "Marcellus", serif;
+  transition: background-color 0.4s ease-in-out;
+  font-size: 14px;
+  &:hover {
+    background-color: var(--primary);
+  }
+}
+
+.font-jost {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+}
+
+.font-marcellus {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+}
+
+.side-menu-title {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.active-link {
+  color: #ab916c;
+}
+
+.sub-title {
+  font-size: 12px;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+}

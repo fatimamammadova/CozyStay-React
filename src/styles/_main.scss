@@ -4,6 +4,7 @@
 
 :root {
   --primary: #ab916c;
+  --secondary: #151719;
 }
 
 * {
@@ -22,16 +23,6 @@ a {
   color: #fff;
 }
 
-.font-jost {
-  font-family: "Jost", sans-serif;
-  font-weight: 500;
-}
-
-.font-marcellus {
-  font-family: "Marcellus", serif;
-  font-weight: 400;
-}
-
 button {
   background-color: transparent;
   border: none;
@@ -47,23 +38,6 @@ ul {
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
-}
-
-.main-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 24px;
-  height: 44px;
-  border: 1px solid var(--primary);
-  color: #ffffff;
-  font-family: "Marcellus", serif;
-  transition: background-color 0.4s ease-in-out;
-  font-size: 14px;
-  &:hover {
-    background-color: var(--primary);
-  }
 }
 
 .overlay {

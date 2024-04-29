@@ -9,6 +9,10 @@
   letter-spacing: 2px;
   font-weight: 500;
   border-bottom: 1px solid #ffffff24;
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+  }
 
   .contact-overlay {
     position: absolute;
@@ -27,10 +31,16 @@
     display: flex;
     div {
       width: 50%;
+
       &:last-child {
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: end;
-        gap: 25px;
+        a:first-child,
+        p {
+          margin-right: 25px;
+        }
       }
     }
   }

@@ -1,24 +1,44 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactHeader from "./ContactHeader/ContactHeader";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./_header.scss";
 import { menu } from "../../utils/data";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ setOpenSideMenu, openSideMenu }) => {
   return (
     <header>
-      <ContactHeader />
+      <ContactHeader openSideMenu={openSideMenu} />
+
+      <div className="header-overlay"></div>
 
       <div className="page-container navbar-container">
         <div className="navbar-item">
-          <button type="button" className="menu-icon">
-            <span className="menu-line"></span>
-            <span className="menu-line"></span>
-            <span className="menu-line"></span>
+          <button
+            type="button"
+            className="menu-icon"
+            onClick={() => setOpenSideMenu((prev) => !prev)}
+          >
+            {openSideMenu ? (
+              <span className="xmark">
+                <FontAwesomeIcon icon={faXmark} size="2xl" />
+              </span>
+            ) : (
+              <>
+                <span className="menu-line"></span>
+                <span className="menu-line"></span>
+                <span className="menu-line"></span>
+              </>
+            )}
           </button>
 
-          <nav>
+
+          {openSideMenu ? (
+            <>
+            
+            </>
+          ) : ( <nav>
             <ul className="menu">
               {menu &&
                 menu.map((link, index) => (
@@ -46,18 +66,19 @@ const Header = () => {
                   </li>
                 ))}
             </ul>
-          </nav>
+          </nav>)}
+         
         </div>
 
         <div className="navbar-item logo">
           <Link to="/">
-            <img src="/img/main-logo-300x60.png" alt="" />
+            <img src="/img/main-logo-300x60.png" alt="" className={openSideMenu ? "side-menu-hover" : ""} />
           </Link>
         </div>
 
         <div className="navbar-item">
           <div className="language">
-            <a href="#">EN</a> / <a href="#">FR</a>
+            <a href="#" className={openSideMenu ? "side-menu-hover" : ""}>EN</a> / <a href="#" className={openSideMenu ? "side-menu-hover" : ""}>FR</a>
           </div>
 
           <Link to="/">
