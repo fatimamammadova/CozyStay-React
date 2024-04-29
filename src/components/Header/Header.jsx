@@ -50,7 +50,9 @@ const Header = () => {
         </div>
 
         <div className="navbar-item logo">
-          <img src="/img/main-logo-300x60.png" alt="" />
+          <Link to="/">
+            <img src="/img/main-logo-300x60.png" alt="" />
+          </Link>
         </div>
 
         <div className="navbar-item">

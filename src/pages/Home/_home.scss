@@ -1,4 +1,4 @@
-@import "./styles/main";
+@import "../../styles/main";
 
 .img-container {
   position: absolute;
@@ -33,7 +33,7 @@
       margin-bottom: 20px;
       .mc-top-inner {
         text-transform: uppercase;
-        padding-top: 120px;
+        padding-top: 100px;
         margin: 0 auto;
         max-width: 960px;
         text-align: center;
@@ -48,6 +48,7 @@
           font-size: 72px;
           margin-top: 20px;
           font-weight: 400;
+          line-height: 1.35;
         }
 
       }
