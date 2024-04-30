@@ -28,11 +28,68 @@ main {
     height: 100vh;
   }
 
-  .main-content {
-    height: calc(100vh - 98px);
-    @media (min-width: 1024px) {
-      height: calc(100vh - 205px);
+  .video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s linear;
+    &.modal-active {
+      pointer-events: auto;
+      visibility: visible;
+      opacity: 1;
     }
+    .modal-inner {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      .close-button {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75em;
+        margin-top: 13px;
+        padding: 0.25em;
+        z-index: 2;
+        line-height: 1;
+        display: flex;
+        color: #fff;
+      }
+
+      .video-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .vl-inner {
+          margin: auto;
+          width: 95vw;
+          max-height: 95vh;
+          @media (min-width: 1024px) {
+            width: 85vw;
+            max-height: 85vh;
+          }
+          iframe {
+            width: 100%;
+            border: none;
+            height: 45vh;
+            @media (min-width: 768px) {
+              height: 65vh;
+            }
+            @media (min-width: 1024px) {
+              height: 85vh;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
     .content-inner {
       .mc-top {
         margin-bottom: 20px;
@@ -42,7 +99,6 @@ main {
           margin: 0 auto;
           max-width: 960px;
           text-align: center;
-          
 
           h1 {
             margin-top: 20px;
@@ -69,7 +125,6 @@ main {
   }
 
   .apartment {
-    background-color: var(--secondary);
     padding: 120px 0px 120px 0px;
     .apartment-inner {
       display: flex;
@@ -126,17 +181,15 @@ main {
           }
         }
 
-
         h2 {
-
           font-size: 36px;
           margin-top: 20px;
           line-height: 1.2em;
           @media (min-width: 1024px) {
-          font-size: 56px;
+            font-size: 56px;
           }
         }
-  
+
         .a-content {
           margin-top: 20px;
           p {
@@ -144,7 +197,7 @@ main {
             line-height: 1.66;
           }
         }
-  
+
         .main-button {
           height: 52px;
           margin-top: 30px;
@@ -152,7 +205,224 @@ main {
           font-size: 16px;
         }
       }
+    }
+  }
 
+  .video {
+    position: relative;
+    .video-img {
+      width: 100%;
+      height: 70vh;
+      @media (min-width: 1024px) {
+        height: 100vh;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .video-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      button {
+        position: relative;
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        cursor: pointer;
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin-top: 1px;
+          margin-left: 4px;
+          max-width: 32px;
+        }
+      }
+    }
+  }
+
+  .apartment-types {
+    .title-inner {
+      text-align: center;
+      padding: 110px 0px 50px 0px;
+
+      .main-title {
+        margin-top: 20px;
+        line-height: 1.35;
+        font-size: 28px;
+        @media (min-width: 768px) {
+          font-size: 32px;
+        }
+        @media (min-width: 1024px) {
+          font-size: 42px;
+        }
+      }
+    }
+
+    .at-cards {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 0px 80px 0px;
+      @media (min-width: 1024px) {
+        padding: 0px 0px 110px 0px;
+        flex-direction: row;
+      }
+      .card {
+        padding: 0px 0px 40px 0px;
+        width: 100%;
+        @media (min-width: 1024px) {
+          width: 33.3333%;
+          &:first-child {
+            padding: 0px 48px 0px 0px;
+          }
+
+          &:last-child {
+            padding: 0px 0px 0px 48px;
+          }
+
+          &:nth-child(2) {
+            padding: 0px 24px 0px 24px;
+          }
+        }
+
+        .card-inner {
+          position: relative;
+          cursor: pointer;
+          width: 100%;
+
+          &:hover {
+            .card-img img {
+              transform: scale(1.07);
+            }
+            .card-title {
+              background-color: var(--hover);
+            }
+          }
+
+          .card-img {
+            overflow: hidden;
+            img {
+              display: block;
+              width: 100%;
+              transition: 0.35s ease-in-out;
+            }
+          }
+
+          .card-title {
+            position: absolute;
+            bottom: 30px;
+            left: -20px;
+            padding: 15px 50px;
+            text-align: center;
+            background-color: #000;
+            width: fit-content;
+            max-width: calc(100% - 20px);
+            transition: background 0.3s, color 0.3s;
+            h6 {
+              font-size: 24px;
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .vacation-experience {
+    background-color: var(--green);
+    margin-top: 140px;
+    margin-bottom: 100px;
+    .ve-inner {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 1024px) {
+        flex-direction: row;
+      }
+      .ve-item {
+        width: 100%;
+        @media (min-width: 1024px) {
+          width: 50%;
+        }
+        .ve-main-img {
+          width: 100%;
+          .ve-main-img-inner {
+            width: 100%;
+            margin: 0;
+            @media (min-width: 1024px) {
+              margin: -140px 0px 0px 0px;
+            }
+            img {
+              height: auto;
+              max-width: 100%;
+              width: 100%;
+            }
+          }
+        }
+
+        .ve-content {
+          padding: 0% 8% 0% 8%;
+          @media (min-width: 1024px) {
+            padding: 0px 96px 0px 96px;
+          }
+          .ve-c-inner {
+            .ve-c-top {
+              margin: 80px 0px 50px 0px;
+              @media (min-width: 1024px) {
+                margin: 140px 0px 80px 0px;
+              }
+              h3 {
+                margin-top: 20px;
+                line-height: 1.2em;
+                font-size: 32px;
+                @media (min-width: 1024px) {
+                  font-size: 36px;
+                }
+                @media (min-width: 1024px) {
+                  font-size: 56px;
+                }
+              }
+
+              .ve-text {
+                margin-top: 20px;
+                p {
+                  line-height: 1.66;
+                  font-size: 18px;
+                  margin: 0 auto 30px;
+                }
+              }
+
+              button {
+                padding: 0 48px;
+                font-size: 16px;
+                margin-top: 30px;
+                height: 52px;
+              }
+            }
+          }
+
+          .ve-c-bottom {
+            .ve-c-img {
+              .ve-c-img-inner {
+                margin: 0px 0px -240px 0px;
+                @media (min-width: 1024px) {
+                  margin: 0px -96px -270px 0px;
+                }
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

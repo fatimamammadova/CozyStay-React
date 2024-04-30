@@ -5,6 +5,8 @@
 :root {
   --primary: #ab916c;
   --secondary: #151719;
+  --hover: #AA8B5F;
+  --green: #53624E;
 }
 
 * {
@@ -16,6 +18,9 @@
 body {
   color: #fff;
   font-family: "Jost", sans-serif;
+  background-color: var(--secondary);
+  position: relative;
+  z-index: -12;
 }
 
 a {
