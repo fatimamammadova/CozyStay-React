@@ -236,7 +236,7 @@ const Home = () => {
                       INTRODUCING OUR SERVICES & FACILITIES
                     </span>
 
-                    <h3 className="font-marcellus section-title">
+                    <h3 className="font-marcellus secondary-section-title">
                       All you need to know to ensure your trip is perfect.
                     </h3>
 
@@ -248,11 +248,32 @@ const Home = () => {
                         24/7 resident services team.
                       </p>
                     </div>
-
-
                   </div>
 
-                  <ServicesCards/>
+                  <ServicesCards />
+                </div>
+              </div>
+            </section>
+
+            <section className="standarts">
+              <div className="s-img">
+                <img src="/img/high-standart-bg-img.jpg" alt="" />
+              </div>
+
+              <div className="overlay"></div>
+
+              <div className="s-content">
+                <div className="page-container">
+                  <div className="s-content-inner">
+                    <span className="sub-title">
+                      High standards of hospitality
+                    </span>
+
+                    <h3 className="secondary-section-title font-marcellus">
+                      We strive to provide our guests with luxury, comfort &
+                      tailor-made service.
+                    </h3>
+                  </div>
                 </div>
               </div>
             </section>
