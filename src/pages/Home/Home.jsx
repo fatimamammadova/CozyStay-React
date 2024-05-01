@@ -5,6 +5,7 @@ import SideMenu from "../../components/SideMenu/SideMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import ServicesCards from "../../components/ServicesCards/ServicesCards";
 
 const Home = () => {
   const [openSideMenu, setOpenSideMenu] = useState(false);
@@ -174,60 +175,87 @@ const Home = () => {
             </section>
 
             <section className="vacation-experience">
-                <div className="ve-inner">
-                  <div className="ve-item">
-                    <div className="ve-main-img">
-                      <div className="ve-main-img-inner">
-                        <img src="/img/vacation-experience-img-1.jpg" alt="" />
-                      </div>
+              <div className="ve-inner">
+                <div className="ve-item">
+                  <div className="ve-main-img">
+                    <div className="ve-main-img-inner">
+                      <img src="/img/vacation-experience-img-1.jpg" alt="" />
                     </div>
                   </div>
+                </div>
 
-                  <div className="ve-item">
-                    <div className="ve-content">
-                      <div className="ve-c-inner">
-                        <div className="ve-c-top">
-                          <span className="sub-title">
-                            BON APPÉTIT DURING VACATIONS AND TRIPS
-                          </span>
+                <div className="ve-item">
+                  <div className="ve-content">
+                    <div className="ve-c-inner">
+                      <div className="ve-c-top">
+                        <span className="sub-title">
+                          BON APPÉTIT DURING VACATIONS AND TRIPS
+                        </span>
 
-                          <h3 className="font-marcellus">
-                            Experience exquisite cuisine from all over the world
-                          </h3>
+                        <h3 className="font-marcellus section-title">
+                          Experience exquisite cuisine from all over the world
+                        </h3>
 
-                          <div className="ve-text">
-                            <p>
-                              The experienced chefs creates international
-                              specialties with unique flavors. Relax with
-                              gourmet cuisine and signature cocktails or
-                              homemade tonics, all enhanced by beautiful music
-                              and gorgeous views over the city. From seasonal
-                              menus to dining experiences to satisfy any
-                              craving, see what our chefs are preparing for you.
-                            </p>
-                          </div>
-
-                          <button type="button" className="main-button">
-                            Start Exploring
-                          </button>
+                        <div className="section-text">
+                          <p>
+                            The experienced chefs creates international
+                            specialties with unique flavors. Relax with gourmet
+                            cuisine and signature cocktails or homemade tonics,
+                            all enhanced by beautiful music and gorgeous views
+                            over the city. From seasonal menus to dining
+                            experiences to satisfy any craving, see what our
+                            chefs are preparing for you.
+                          </p>
                         </div>
-                        <div className="ve-c-bottom">
-                          <div className="ve-c-img">
-                            <div className="ve-c-img-inner">
-                              <img
-                                src="/img/vacation-experience-img-2.jpg"
-                                alt=""
-                              />
-                            </div>
+
+                        <button type="button" className="main-button">
+                          Start Exploring
+                        </button>
+                      </div>
+                      <div className="ve-c-bottom">
+                        <div className="ve-c-img">
+                          <div className="ve-c-img-inner">
+                            <img
+                              src="/img/vacation-experience-img-2.jpg"
+                              alt=""
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
             </section>
 
-            
+            <section className="services">
+              <div className="page-container">
+                <div className="services-inner">
+                  <div className="s-content">
+                    <span className="sub-title">
+                      INTRODUCING OUR SERVICES & FACILITIES
+                    </span>
+
+                    <h3 className="font-marcellus section-title">
+                      All you need to know to ensure your trip is perfect.
+                    </h3>
+
+                    <div className="section-text">
+                      <p>
+                        State-of-the-art amenities include a dramatic
+                        double-story loft lounge, spectacular rooftop lounge,
+                        Technogym fitness center, media corner, and a gracious
+                        24/7 resident services team.
+                      </p>
+                    </div>
+
+
+                  </div>
+
+                  <ServicesCards/>
+                </div>
+              </div>
+            </section>
           </div>
         </>
       )}

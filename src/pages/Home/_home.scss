@@ -378,26 +378,6 @@ main {
               @media (min-width: 1024px) {
                 margin: 140px 0px 80px 0px;
               }
-              h3 {
-                margin-top: 20px;
-                line-height: 1.2em;
-                font-size: 32px;
-                @media (min-width: 1024px) {
-                  font-size: 36px;
-                }
-                @media (min-width: 1024px) {
-                  font-size: 56px;
-                }
-              }
-
-              .ve-text {
-                margin-top: 20px;
-                p {
-                  line-height: 1.66;
-                  font-size: 18px;
-                  margin: 0 auto 30px;
-                }
-              }
 
               button {
                 padding: 0 48px;
@@ -420,6 +400,32 @@ main {
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  .services {
+    @media (max-width: 1024px) {
+      padding: 200px 0px 80px 0px;
+    }
+    .services-inner {
+      .s-content {
+        margin: 0px 0px 60px 0px;
+        @media (min-width: 1024px) {
+          max-width: 51%;
+          margin: 0px 0px 100px 0px;
+        }
+        .section-title {
+          line-height: 1.2em;
+          font-size: 32px;
+          @media (min-width: 768px) {
+            font-size: 36px;
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 52px;
           }
         }
       }

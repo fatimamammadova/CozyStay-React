@@ -5,8 +5,8 @@
 :root {
   --primary: #ab916c;
   --secondary: #151719;
-  --hover: #AA8B5F;
-  --green: #53624E;
+  --hover: #aa8b5f;
+  --green: #53624e;
 }
 
 * {
@@ -75,5 +75,26 @@ ul {
   a {
     font-size: 25px;
     color: #fff;
+  }
+}
+
+.section-text {
+  margin-top: 20px;
+  p {
+    line-height: 1.66;
+    font-size: 18px;
+    margin: 0 auto 30px;
+  }
+}
+
+.section-title {
+  margin-top: 20px;
+  line-height: 1.2em;
+  font-size: 32px;
+  @media (min-width: 1024px) {
+    font-size: 36px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 56px;
   }
 }
