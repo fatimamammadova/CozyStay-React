@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import ServicesCards from "../../components/ServicesCards/ServicesCards";
+import FeedBackSwiper from "../../components/FeedbackSwiper/FeedbackSwiper";
 
 const Home = () => {
   const [openSideMenu, setOpenSideMenu] = useState(false);
@@ -277,6 +278,8 @@ const Home = () => {
                 </div>
               </div>
             </section>
+
+            <FeedBackSwiper/>
           </div>
         </>
       )}
