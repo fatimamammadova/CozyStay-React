@@ -8,7 +8,7 @@ const FooterTop = () => {
         <div
           className="f-t-item"
           style={{
-            backgroundImage: "url('../../../public/img/footer-img-1.jpg')",
+            backgroundImage: "url('../../public/img/footer-img-1.jpg')",
           }}
         >
           <div className="overlay"></div>
@@ -35,7 +35,7 @@ const FooterTop = () => {
         <div
           className="f-t-item"
           style={{
-            backgroundImage: "url('../../../public/img/footer-img-2.jpg')",
+            backgroundImage: "url('../../public/img/footer-img-2.jpg')",
           }}
         >
           <div className="overlay"></div>
