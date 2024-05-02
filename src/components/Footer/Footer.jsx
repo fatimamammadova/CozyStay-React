@@ -14,7 +14,9 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
+
 const Footer = () => {
+  
   return (
     <>
       <FooterTop />
@@ -59,7 +61,9 @@ const Footer = () => {
         <div className="f-bottom">
           <div className="page-container">
             <div className="f-bottom-inner f-b-col">
-              <p className=" f-b-col">© Copyright CozyStay WordPress Theme for Hotel Booking.</p>
+              <p className=" f-b-col">
+                © Copyright CozyStay WordPress Theme for Hotel Booking.
+              </p>
 
               <div className="icons f-b-col">
                 {[

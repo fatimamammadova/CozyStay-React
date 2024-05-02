@@ -12,7 +12,7 @@ import Header from "../Header/Header";
 import "./_sideMenu.scss";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFax } from "@fortawesome/free-solid-svg-icons/faFax";
+import { faFax, height } from "@fortawesome/free-solid-svg-icons/faFax";
 import {
   faFacebookF,
   faInstagram,

@@ -9,10 +9,6 @@ export const menu = [
     sub_menu: [
       {
         path: "/rooms",
-        name: "Rooms Page",
-      },
-      {
-        path: "/rooms",
         name: "Room Details – Top Image",
       },
     ],
@@ -84,18 +80,23 @@ export const servicesCards = [
     title: "Stylish Meeting Spaces",
     text: "The hotel offers three intimate meeting rooms, each accommodating up to ten guests for formal meetings. Equipped with wireless Internet access, speakerphone and tables with chairs.",
     image: "/img/service-card-1.jpg",
+    aos: "fade-right"
   },
   {
     sub_title: "Wellness",
     title: "Spa, Massage, Sauna",
     text: "In the hotel spa center we offer an exceptional well-being experience combining our expertise, high technology and breathtaking results.",
     image: "/img/service-card-2.jpg",
+    aos: "fade-left"
+
   },
   {
     sub_title: "Training Spaces",
     title: "Workout & Yoga Rooms",
     text: "Our fitness centre includes a fully equipped gym, yoga room and dance studio. Maintain your fitness routine during the trip over the stunning views of the city.",
     image: "/img/service-card-3.jpg",
+    aos: "fade-right"
+
   },
 ];
 
@@ -132,20 +133,23 @@ export const activitiesCards = [
     title: "Exhibitions & Museum",
     text: "Don’t miss the excellent art exhibitions coming up. You will always find something you like: traditional paintings, transformative sculptures, interactive art exhibits, and etc.",
     image: "/img/activities-img-1.jpg",
-    recommended: true
+    recommended: true,
+    aos: "fade-up",
   },
   {
     sub_title: "Nature",
     title: "Nearby Parks",
     text: "Numerous beautiful parks allow you to roam freely in nature even in the city. Each park has its own characteristics, come and check out what surprises it can bring you.",
     image: "/img/activities-img-2.jpg",
-    recommended: false
+    recommended: false,
+    aos: "fade-down",
   },
   {
     sub_title: "Dining Experiences",
     title: "Local Food Tour",
     text: "How can we not mention all kinds of seasonal delicacies and major food festivals? Highlights: Tarot readings and cocktails nights at CozyStay’s bar every Thursday this month.",
     image: "/img/activities-img-3.jpg",
-    recommended: false
+    recommended: false,
+    aos: "fade-up",
   },
 ];

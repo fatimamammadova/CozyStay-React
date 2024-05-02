@@ -8,7 +8,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ setOpenSideMenu, openSideMenu }) => {
   return (
-    <header>
+    <header className={`${openSideMenu ? "menu" : ""}`}>
       <ContactHeader openSideMenu={openSideMenu} />
 
       <div className="header-overlay"></div>

@@ -7,10 +7,16 @@ import { feedbacks } from "../../utils/data";
 import "./_feedbackSwiper.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const FeedBackSwiper = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <section className="feedbacks">
+    <section className="feedbacks" data-aos="fade-up" data-aos-duration="2000">
       <div className="f-inner">
         <div className="wrapper"></div>
 

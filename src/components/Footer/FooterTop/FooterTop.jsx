@@ -1,9 +1,14 @@
 import "./_footerTop.scss";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const FooterTop = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="footer-top">
+    <div className="footer-top" data-aos="fade-up" data-aos-duration="1500">
       <div className="f-t-inner">
         <div
           className="f-t-item"

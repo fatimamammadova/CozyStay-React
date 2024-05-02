@@ -1,18 +1,29 @@
 import { servicesCards } from "../../utils/data";
 import "./_servicesCards.scss";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ServicesCards = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="services-cards">
       <div className="sc-inner">
         {servicesCards &&
           servicesCards.map((card, index) => (
-            <div className="s-card" key={index}>
+            <div
+              className="s-card"
+              key={index}
+              data-aos={card.aos}
+              data-aos-duration={`${1300 + index * 200}`}
+            >
               <Link to="/" className="s-c-inner">
                 <div className="s-card-item">
                   <div className="s-card-img">
-                      <img src={card.image} alt="" />
+                    <img src={card.image} alt="" />
                   </div>
                 </div>
                 <div className="s-card-item">

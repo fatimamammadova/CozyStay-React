@@ -3,8 +3,14 @@ import { activitiesCards } from "../../utils/data";
 import "./_activitiesCards.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ActivitiesCards = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <section className="activities">
       <div className="page-container">
@@ -26,7 +32,12 @@ const ActivitiesCards = () => {
           <div className="a-cards-inner">
             {activitiesCards &&
               activitiesCards.map((card, index) => (
-                <div className="a-card-item" key={index}>
+                <div
+                  className="a-card-item"
+                  key={index}
+                  data-aos={card.aos}
+                  data-aos-duration="1500"
+                >
                   <Link to="/" className="a-card-inner">
                     {card.recommended && (
                       <div className="recommended">
