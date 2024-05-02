@@ -7,6 +7,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import ServicesCards from "../../components/ServicesCards/ServicesCards";
 import FeedBackSwiper from "../../components/FeedbackSwiper/FeedbackSwiper";
+import ActivitiesCards from "../../components/ActivitiesCards/ActivitiesCards";
 
 const Home = () => {
   const [openSideMenu, setOpenSideMenu] = useState(false);
@@ -280,6 +281,8 @@ const Home = () => {
             </section>
 
             <FeedBackSwiper/>
+
+            <ActivitiesCards/>
           </div>
         </>
       )}

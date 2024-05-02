@@ -125,3 +125,27 @@ export const feedbacks = [
     author_job: "TripAdvisor",
   },
 ];
+
+export const activitiesCards = [
+  {
+    sub_title: "Arts & Culture",
+    title: "Exhibitions & Museum",
+    text: "Don’t miss the excellent art exhibitions coming up. You will always find something you like: traditional paintings, transformative sculptures, interactive art exhibits, and etc.",
+    image: "/img/activities-img-1.jpg",
+    recommended: true
+  },
+  {
+    sub_title: "Nature",
+    title: "Nearby Parks",
+    text: "Numerous beautiful parks allow you to roam freely in nature even in the city. Each park has its own characteristics, come and check out what surprises it can bring you.",
+    image: "/img/activities-img-2.jpg",
+    recommended: false
+  },
+  {
+    sub_title: "Dining Experiences",
+    title: "Local Food Tour",
+    text: "How can we not mention all kinds of seasonal delicacies and major food festivals? Highlights: Tarot readings and cocktails nights at CozyStay’s bar every Thursday this month.",
+    image: "/img/activities-img-3.jpg",
+    recommended: false
+  },
+];
