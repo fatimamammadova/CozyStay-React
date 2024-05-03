@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-
   .content-inner {
     margin: 0 auto;
     max-width: 960px;
@@ -23,8 +22,199 @@
       }
     }
     p {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  }
+}
+
+.service-card {
+  padding: 0px 0px 80px 0px;
+  @media (min-width: 1024px) {
+    padding: 0px 0px 120px 0px;
+  }
+  &.card-1,
+  &.card-3 {
+    padding: 80px 0px 80px 0px;
+    @media (min-width: 1024px) {
+      padding: 120px 0px 120px 0px;
+    }
+    .c-img-1 {
+      margin: 0px 0px 10px 0px;
+      @media (min-width: 768px) {
+        margin: 0% 0% 20% 0%;
+      }
+    }
+    .c-img-2 {
+      display: flex;
+      align-items: flex-end;
+      align-content: flex-end;
+      @media (min-width: 768px) {
+        margin: 0px 0px 0px 10px;
+      }
+    }
+    .card-right {
+      padding: 50px 0px 0px 0px;
+      @media (min-width: 1024px) {
+        padding: 0px 0px 0px 60px;
+      }
+    }
+  }
+
+  &.card-2,
+  &.card-4 {
+    .card-wrapper {
+      flex-direction: row-reverse;
+      .c-img-1 {
+        margin: 0px 0px 10px 0px;
+        @media (min-width: 768px) {
+          margin: 0;
+        }
+      }
+      .c-img-2 {
+        @media (min-width: 768px) {
+          margin-left: 20px;
+        }
+        display: flex;
+        align-content: center;
+        align-items: center;
+      }
+
+      .card-right {
+        padding: 50px 0px 0px 0px;
+        @media (min-width: 1024px) {
+          padding: 0px 50px 0 0;
+        }
+      }
+    }
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .card-col {
+      width: 100%;
+      @media (min-width: 1024px) {
+        width: 50%;
+      }
+      &.card-left {
+        .cl-inner {
+          display: flex;
+          align-items: center;
+          align-content: center;
+          flex-direction: column;
+
+          @media (min-width: 768px) {
+            flex-direction: row;
+          }
+          .c-img {
+            width: 100%;
+            @media (min-width: 768px) {
+              width: 50%;
+            }
+            img {
+              height: auto;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      &.card-right {
+        .cr-inner {
+          h3 {
+            margin-top: 20px;
+            line-height: 1.35;
+            font-size: 28px;
+            @media screen and (min-width: 768px) {
+              font-size: 32px;
+            }
+            @media screen and (min-width: 1200px) {
+              font-size: 42px;
+            }
+          }
+          .text {
+            margin-top: 20px;
+            color: #cfcfcf;
+            margin-bottom: 20px;
+          }
+
+          .opening-hours {
+            h6 {
+              font-size: 21px;
+              margin: 10px 0px 20px 0px;
+            }
+
+            ul {
+              margin-bottom: 20px;
+              li {
+                line-height: 1.4;
+                padding: 2px 0;
+                .card-icon {
+                  margin-right: 10px;
+                  color: var(--border-primary-color);
+                }
+                .hours {
+                  color: #cfcfcf;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+
+          .btn {
+            margin: 10px 0px 0px 0px;
+            .main-button {
+              padding: 0 48px;
+              font-size: 16px;
+              height: 52px;
+              &.button-2 {
+                margin: 10px 0px 0px 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.services-facilites {
+  padding: 160px 0px 160px 0px;
+  position: relative;
+  .s-f-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -4;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      width: 100%;
+    }
+  }
+
+  .overlay {
+    opacity: 0.2;
+  }
+
+  .s-f-content {
+    .s-f-content-inner {
+      width: 100%;
+      @media (min-width: 1024px) {
+        width: 51%;
+      }
+      .text {
         margin-top: 20px;
-        font-size: 18px;
+        p {
+            font-size: 18px;
+        }
+      }
     }
   }
 }
