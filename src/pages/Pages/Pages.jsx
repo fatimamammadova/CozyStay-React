@@ -101,7 +101,7 @@ const Pages = () => {
       <section
         className="services-facilites"
         data-aos="fade-up"
-        data-aos-duration="500"
+        data-aos-duration="1000"
       >
         <div className="s-f-img">
           <img src="/img/pages-bg-img-2.jpg" alt="" />
@@ -109,11 +109,7 @@ const Pages = () => {
 
         <div className="overlay"></div>
 
-        <div
-          className="s-f-content"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+        <div className="s-f-content">
           <div className="page-container">
             <div className="s-f-content-inner">
               <span className="sub-title">
