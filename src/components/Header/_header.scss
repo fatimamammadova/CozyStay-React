@@ -159,6 +159,9 @@ header {
                   line-height: 36px;
                   transition: all 0.4s;
                   white-space: nowrap;
+                  &.submenu-active {
+                    color: var(--primary);
+                  }
                   &:hover {
                     color: var(--primary);
                   }

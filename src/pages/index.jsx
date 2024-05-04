@@ -8,7 +8,7 @@ const Index = ({ children }) => {
 
   return (
     <>
-      <main>
+      <div className="container">
         {openSideMenu ? (
           <SideMenu
             setOpenSideMenu={setOpenSideMenu}
@@ -20,10 +20,11 @@ const Index = ({ children }) => {
               setOpenSideMenu={setOpenSideMenu}
               openSideMenu={openSideMenu}
             />
-            {children}
+
+            <main>{children}</main>
           </>
         )}
-      </main>
+      </div>
 
       {!openSideMenu && <Footer />}
     </>

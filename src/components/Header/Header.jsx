@@ -58,7 +58,7 @@ const Header = ({ setOpenSideMenu, openSideMenu }) => {
                         {link.sub_menu &&
                           link.sub_menu.map((submenu, index) => (
                             <li className="submenu-list" key={index}>
-                              <Link to={submenu.path}>{submenu.name}</Link>
+                              <NavLink className={({ isActive }) => (isActive ? "submenu-active" : "")}  to={submenu.path}>{submenu.name}</NavLink>
                             </li>
                           ))}
                       </ul>
