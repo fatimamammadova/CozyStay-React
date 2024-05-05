@@ -1,0 +1,34 @@
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  z-index: 1000;
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 0;
+  border: 1px solid #b99d75;
+  color: #b99d75;
+  text-align: center;
+  line-height: 46px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: opacity 0.4s, transform 0.4s, background 0.4s, color 0.4s;
+  box-sizing: content-box;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  svg {
+    color: #b99d75;
+    transition: color 0.4s;
+  }
+  &:hover {
+    background-color: #b99d75;
+    svg {
+      color: #fff;
+    }
+  }
+}

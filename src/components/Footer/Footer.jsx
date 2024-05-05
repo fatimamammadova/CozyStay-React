@@ -14,9 +14,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
-
 const Footer = () => {
-  
   return (
     <>
       <FooterTop />

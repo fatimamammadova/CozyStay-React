@@ -1,6 +1,7 @@
 @import "../../styles/main";
 
 .services-cards {
+  overflow-x: hidden;
   .sc-inner {
     .s-card {
       display: flex;
@@ -15,7 +16,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        
+
         @media (min-width: 1024px) {
           flex-direction: row;
         }

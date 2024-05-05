@@ -2,6 +2,7 @@ import Footer from "../components/Footer/Footer";
 import SideMenu from "../components/SideMenu/SideMenu";
 import { useState } from "react";
 import Header from "../components/Header/Header";
+import GoToTop from "../components/GoToTop/GoToTop";
 
 const Index = ({ children }) => {
   const [openSideMenu, setOpenSideMenu] = useState(false);
@@ -25,7 +26,7 @@ const Index = ({ children }) => {
           </>
         )}
       </div>
-
+        <GoToTop />
       {!openSideMenu && <Footer />}
     </>
   );
