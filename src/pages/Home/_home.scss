@@ -70,7 +70,11 @@
         margin-bottom: 20px;
         .mc-top-inner {
           text-transform: uppercase;
-          padding-top: 250px;
+          padding-top: 200px;
+          @media (min-width: 768px) {
+            padding-top: 290px;
+            
+          }
           margin: 0 auto;
           max-width: 960px;
           text-align: center;
@@ -91,6 +95,7 @@
       }
   
       .mc-bottom {
+        margin: 20px 0px 80px 0px;
       }
     }
   }

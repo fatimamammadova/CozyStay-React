@@ -112,9 +112,70 @@ main {
                   color: var(--border-primary-color);
                 }
               }
-              .title {  
+              .title {
                 font-size: 16px;
               }
+            }
+          }
+        }
+      }
+
+      .room-amenities {
+        margin-bottom: 20px;
+
+        .ra-items {
+          display: flex;
+
+          flex-direction: column;
+          @media (min-width: 600px) {
+            flex-direction: row;
+            
+          }
+          .ra-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin: calc(0px - 20px / 2);
+            padding-bottom: calc(40px / 2);
+            width: calc(100% + 20px);
+            .ra-item {
+              position: relative;
+              display: flex;
+              align-items: center;
+              width: 100%;
+              padding: calc(20px / 2);
+              .icon {
+                display: block;
+                margin-right: 16px;
+              }
+  
+              .ra-item-title {
+                position: relative;
+                flex: 1 1 auto;
+                line-height: 1.35;
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+
+      .suite {
+        ul {
+          li {
+            padding: 7px 0;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            .icon {
+              display: block;
+              margin-right: 15px;
+              color: var(--border-primary-color);
+              
+            }
+            .s-title {
+              color: #cfcfcf;
+              font-size: 18px;
+
             }
           }
         }

@@ -9,6 +9,7 @@ import ActivitiesCards from "../../components/ActivitiesCards/ActivitiesCards";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Index from "../index.jsx";
+import ResevationForm from "../../components/ReservationForm/ReservationForm.jsx";
 
 const Home = () => {
   const [openVideo, setOpenVideo] = useState(false);
@@ -58,7 +59,9 @@ const Home = () => {
                 </h1>
               </div>
             </div>
-            <div className="mc-bottom"></div>
+            <div className="mc-bottom">
+              <ResevationForm/>
+            </div>
           </div>
         </div>
       </div>

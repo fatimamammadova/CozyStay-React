@@ -1,0 +1,67 @@
+@import "../../styles/main";
+
+.calendar {
+  padding-top: 50px;
+  .c-title {
+    padding-top: 50px;
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 24px;
+  }
+
+  div {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    .react-datepicker {
+      width: 100%;
+      .react-datepicker__navigation-icon--previous {
+        display: none;
+      }
+      .react-datepicker__month-container {
+        width: 100%;
+        @media (min-width: 768px) {
+          width: 50%;
+        }
+        .react-datepicker__month {
+          width: 100%;
+          .react-datepicker__week {
+            .react-datepicker__day {
+              &.react-datepicker__day--selected {
+                background-color: var(--border-primary-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: end;
+    button {
+      padding: 8px 14px;
+      min-width: 80px;
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: 2px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: 0.2s;
+      margin-left: 8px;
+      font-size: 12px;
+      &:last-child {
+        color: #000;
+        background-color: #fff;
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
