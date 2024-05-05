@@ -35,6 +35,12 @@ main {
   }
 
   .room-container {
+    .flex {
+      @media (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
     .r-col-1 {
       width: 100%;
       @media (min-width: 1200px) {
@@ -129,7 +135,6 @@ main {
           flex-direction: column;
           @media (min-width: 600px) {
             flex-direction: row;
-            
           }
           .ra-wrapper {
             display: flex;
@@ -147,7 +152,7 @@ main {
                 display: block;
                 margin-right: 16px;
               }
-  
+
               .ra-item-title {
                 position: relative;
                 flex: 1 1 auto;
@@ -170,12 +175,10 @@ main {
               display: block;
               margin-right: 15px;
               color: var(--border-primary-color);
-              
             }
             .s-title {
               color: #cfcfcf;
               font-size: 18px;
-
             }
           }
         }
@@ -184,8 +187,472 @@ main {
 
     .r-col-2 {
       width: 100%;
+      .room-booking {
+        .room-booking-inner {
+          padding: 50px 45px 55px;
+          background: rgba(255, 255, 255, 0.02);
+          border-radius: 8px;
+          transition: opacity 0.3s;
+          .room-booking-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 32px;
+            h4 {
+              font-size: 30px;
+              font-size: 1.875rem;
+              text-transform: uppercase;
+              & + span {
+                text-align: right;
+              }
+            }
+            .base-price {
+              font-size: 18px;
+              font-size: 1.125rem;
+              font-weight: 500;
+            }
+          }
+          .room-booking-form {
+            .cs-form-group {
+              display: flex;
+              gap: 12px;
+              & > * {
+                padding-top: 12px;
+              }
+            }
+            .cs-form-field {
+              &:not(:first-child) {
+                padding-top: 12px;
+              }
+              &.cs-submit {
+                padding-top: 35px;
+              }
+              width: 100%;
+              .field-wrap,
+              .field-input-wrap {
+                position: relative;
+                & > .cs-form-label {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  left: 15px;
+                  color: #fff;
+                  display: block;
+
+                  font-size: 16px;
+                  font-size: 1rem;
+                }
+              }
+              .field-input-wrap > input {
+                text-align: right;
+                width: 100%;
+                height: 48px;
+                padding: 5px 15px;
+                background: none;
+                border-color: #b99d75;
+                border-style: solid;
+                border-width: 1px;
+                color: #fff;
+                font-size: 16px;
+                font-size: 1rem;
+                line-height: 2;
+                font-weight: 400;
+                transition: 0.3s;
+                padding-right: 35px;
+              }
+              .date-range-picker {
+                position: absolute;
+                pointer-events: none;
+                visibility: hidden;
+                opacity: 0;
+              }
+              svg {
+                position: absolute;
+                right: 10px;
+                opacity: 0.35;
+                font-size: 16px;
+                line-height: 1;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+            .csf-title {
+              font-size: 24px;
+              font-size: 1.5rem;
+              & + .cs-extra-service {
+                margin-top: 10px;
+              }
+            }
+            .cs-extra-service-group {
+              margin-top: 60px;
+              .field-wrap {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+            }
+            .label-checkbox {
+              position: relative;
+              display: flex;
+              align-items: center;
+            }
+            .hidden-check {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              opacity: 0;
+              width: 17px;
+              height: 17px;
+              cursor: pointer;
+              &:checked + .cs-styled-checkbox:after {
+                opacity: 1;
+              }
+            }
+            .cs-styled-checkbox {
+              position: relative;
+              width: 18px;
+              height: 18px;
+              border: 1px solid #b99d75;
+              margin-right: 12px;
+              pointer-events: none;
+              &:after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 8px;
+                height: 8px;
+                background: #b99d75;
+                content: "";
+                opacity: 0;
+              }
+            }
+            .checkbox-label label {
+              cursor: pointer;
+            }
+            .price-quantity {
+              position: relative;
+              display: flex;
+              align-items: center;
+              .field-input-wrap {
+                width: 65px;
+                input {
+                  height: 35px;
+                  text-align: left;
+                }
+              }
+              .cs-form-price {
+                font-size: 14px;
+                font-size: 0.875rem;
+                line-height: 35px;
+                &:not(:last-child) {
+                  margin-right: 15px;
+                }
+              }
+            }
+            .cs-form-total-price {
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 35px;
+              padding-top: 40px;
+              cursor: pointer;
+              &:before {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+                display: block;
+                width: calc(100% + 70px);
+                height: 1px;
+                background: rgba(255, 255, 255, 0.1);
+                content: "";
+              }
+              .total-price {
+                font-size: 24px;
+                font-size: 1.5rem;
+              }
+              svg {
+                margin-left: 10px;
+                font-size: 1rem;
+              }
+            }
+            .button {
+              position: relative;
+              z-index: 9;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              background: #000;
+              border-radius: 5px;
+              color: #fff;
+              transition: 0.4s;
+              cursor: pointer;
+              padding: 0 15px;
+              width: 100%;
+              height: 48px;
+              line-height: 1.2;
+              text-align: center;
+              font-size: 1.125rem;
+            }
+          }
+        }
+      }
       @media (min-width: 1200px) {
         width: 440px;
+      }
+    }
+    .similar-rooms {
+      margin-bottom: 80px;
+      .similar-rooms-title {
+        padding-top: 70px;
+        margin-bottom: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 30px;
+        font-size: 1.875rem;
+      }
+      .posts.img-ratio-1-1 {
+        --img-ratio: 100%;
+        --ratio: 1;
+      }
+      .cs-rooms {
+        --post-max-width: 800px;
+        --item-v-space: 10px;
+        --icon-size: 25px;
+        --label-bg: #fff;
+        --label-color: #000;
+        --label-border: #fff;
+        --post-gap: 35px;
+      }
+      .featured-img {
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+        z-index: 1;
+        width: 100%;
+        a {
+          transform: scale(1.01);
+          transition: 0.35s ease-in-out;
+          display: block;
+          height: 0;
+          padding-top: var(--img-ratio);
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 8;
+          pointer-events: none;
+          content: "";
+          background: #53624e;
+          opacity: 0;
+          transition: opacity 0.4s;
+        }
+      }
+      .cs-rooms .overlay-label {
+        top: 20px;
+        left: 20px;
+        background: var(--label-bg);
+        border: 1px solid var(--label-border);
+        color: var(--label-color);
+        padding: 8px 12px;
+        font-size: 12px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+      }
+      .posts .overlay-label {
+        position: absolute;
+        z-index: 99;
+        pointer-events: none;
+        text-align: center;
+      }
+      .cs-rooms.layout-overlay {
+        .post-excerpt {
+          margin-bottom: 15px;
+          font-size: 1rem;
+          line-height: 1.6;
+          p {
+            margin: 0 auto 30px;
+            font-size: inherit;
+          }
+        }
+        .hover-show-content {
+          position: absolute !important;
+          z-index: 9;
+          bottom: 0;
+          left: 0;
+          padding: 150px 24px 30px;
+          opacity: 0;
+          transition: opacity 0.4s, transform 0.4s;
+          transform: translateY(50px);
+          footer {
+            background-color: transparent;
+          }
+          .cs-btn-underline {
+            padding: 7px 0;
+            pointer-events: auto;
+            border-radius: 0;
+            background: none;
+            position: relative;
+            line-height: 1;
+            font-size: 0.875rem;
+            display: inline-flex;
+            &:before {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              display: block;
+              width: 100%;
+              height: 1px;
+              background: #b99d75;
+              content: "";
+              transition: transform 0.2s ease;
+              transform-origin: 0 0;
+            }
+            span {
+              position: relative;
+              display: flex;
+              align-items: center;
+              svg {
+                transition: all 0.2s ease;
+                padding-left: 5px;
+                font-size: 12px;
+              }
+            }
+            &:hover {
+              &:before {
+                transform: scaleX(0);
+              }
+              span {
+                svg {
+                  padding-left: 10px;
+                }
+              }
+            }
+          }
+        }
+        .item-header {
+          margin: 0;
+          transition: opacity 0.4s, transform 0.4s;
+        }
+        .post {
+          .cs-room-content {
+            transform: translateY(0);
+          }
+          .post-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 9;
+            pointer-events: none;
+            padding: 150px 24px 30px;
+            width: 100%;
+            &:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 1;
+              pointer-events: none;
+              content: "";
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.65),
+                rgba(0, 0, 0, 0)
+              );
+              transition: opacity 0.4s;
+            }
+          }
+        }
+        &.with-hover-effect .post:hover .item-header {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+      }
+      .posts.layout-overlay {
+        .post-header {
+          z-index: 9;
+        }
+        .post {
+          &:hover {
+            .featured-img:after {
+              opacity: 0.9;
+            }
+            .post-content:before {
+              opacity: 0;
+            }
+            .hover-show-content {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .post-content > * {
+            position: relative;
+          }
+        }
+      }
+      .posts .post {
+        position: relative;
+        overflow: hidden;
+        margin-top: 35px;
+        .item-title {
+          font-family: "Marcellus", serif;
+          font-weight: 400;
+        }
+      }
+      .posts .post-title {
+        font-size: 21px;
+        font-size: 1.3125rem;
+        line-height: 1.2;
+      }
+      .cs-rooms .cs-room-content .item-subtitle {
+        margin-top: var(--item-v-space);
+        font-size: 0.9375rem;
+      }
+      @media screen and (min-width: 768px) {
+        .posts.layout-grid {
+          .posts-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: flex-start;
+            margin-left: -35px;
+          }
+          .post {
+            margin-right: 0;
+            margin-left: 35px;
+            width: calc(50% - 35px);
+          }
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        .posts.layout-grid.column-3 .post {
+          width: calc(33.333333% - 35px);
+          &:nth-child(-n + 3) {
+            margin-top: 0 !important;
+          }
+        }
+        .posts .post-title {
+          font-size: 24px;
+          font-size: 1.5rem;
+        }
       }
     }
   }
